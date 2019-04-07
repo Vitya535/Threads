@@ -11,7 +11,7 @@ public class Client {
 
     private ClientAction clientAction;
 
-    private long timeOfService;
+    private Integer timeOfService;
 
     public Integer getMoney() {
         return money;
@@ -29,17 +29,26 @@ public class Client {
         this.clientAction = clientAction;
     }
 
-    public long getTimeOfService() {
+    public Integer getTimeOfService() {
         return timeOfService;
     }
 
-    public void setTimeOfService(long timeOfService) {
+    public void setTimeOfService(Integer timeOfService) {
         this.timeOfService = timeOfService;
     }
 
-    public Client(Integer money, ClientAction clientAction, long timeOfService) {
+    public Client(Integer money, ClientAction clientAction, Integer timeOfService) {
         this.money = money;
         this.clientAction = clientAction;
         this.timeOfService = timeOfService;
+    }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "money=" + money +
+                ", clientAction=" + clientAction +
+                ", timeOfService=" + timeOfService +
+                '}';
     }
 }
